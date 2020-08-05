@@ -1,5 +1,14 @@
 {
     "webcredentials":{
         "apps":["85268FF6B6.com.meijia.demo"]
+    },
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "85268FF6B6.com.meijia.demo",
+                "paths": [ "*"]
+            }
+        ]
     }
 }
