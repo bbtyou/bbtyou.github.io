@@ -1,12 +1,12 @@
 {
     "webcredentials":{
-        "apps":["85268FF6B6.com.meijia.demo"]
+        "apps":["7PC2HF82TQ.com.meijia.product"]
     },
     "applinks": {
         "apps": [],
         "details": [
             {
-                "appID": "85268FF6B6.com.meijia.demo",
+                "appID": "7PC2HF82TQ.com.meijia.product",
                 "paths": [ "*"]
             }
         ]
