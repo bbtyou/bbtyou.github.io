@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字游戏</title>
+    <script>
+        var guessNum = 0;
+        var guessCount = 10;
+        function startGame() {
+            guessNum = Math.floor(Math.random() * 100);
+            guessCount = 10;
+            document.getElementById("start").disabled = "disabled";
+            document.getElementById("submit").disabled = "";
+            document.getElementById("inputTimes").value = guessCount;
+        };
+        function gameOver (){
+            document.getElementById("start").disabled = "";
+            document.getElementById("submit").disabled = "disabled";
+            document.getElementById("inputTimes").value = "";
+            document.getElementById("inputResult").value = "";
+            document.getElementById("inputNum").value = "";
+        }
+        function submit() {
+            var num = document.getElementById("inputNum").value;
+            if (num < 0 ||
+                num > 99){
+                alert("请输入一个0-99之间的整数");
+                return;
+            }
+            --guessCount;
+            if (num == guessNum){
+                gameOver();
+                alert("您猜对了!");
+                return;
+            }else if (num > guessNum){
+                document.getElementById("inputResult").value = "您猜大了!";
+            }else{
+                document.getElementById("inputResult").value = "您猜小了!";
+            }
+            if (guessCount == 0){
+                alert("您的次数已猜完!");
+                gameOver();
+                return;
+            }else{
+                document.getElementById("inputTimes").value = guessCount;
+            }
+        }
+    </script>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        p {
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>猜数游戏</h1>
+    <p>请输入一个0-99之间的整数：</p>
+    <input id="inputNum" type="number"><button id="submit" disabled="disabled"
+        onclick="submit()">确定</button><button id="start" onclick="startGame()">开始</button>
+    <p>结果：<input id="inputResult" value="" disabled="disabled"></p>
+    <p>当前还可以猜测的次数：<input id="inputTimes" value="10" disabled="disabled"></p>
+</body>
+
+</html>
