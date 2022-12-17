@@ -15,6 +15,7 @@
             document.getElementById("start").disabled = "disabled";
             document.getElementById("submit").disabled = "";
             document.getElementById("inputTimes").value = guessCount;
+            document.getElementById("inputNum").focus();
         };
         function gameOver (){
             document.getElementById("start").disabled = "";
@@ -37,8 +38,10 @@
                 return;
             }else if (num > guessNum){
                 document.getElementById("inputResult").value = "您猜大了!";
+                document.getElementById("inputNum").focus();
             }else{
                 document.getElementById("inputResult").value = "您猜小了!";
+                document.getElementById("inputNum").focus();
             }
             if (guessCount == 0){
                 alert("您的次数已猜完!");
