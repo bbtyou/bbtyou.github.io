@@ -8,10 +8,10 @@
     <title>猜数字游戏</title>
     <script>
         var guessNum = 0;
-        var guessCount = 10;
+        var guessCount = 7;
         function startGame() {
             guessNum = Math.floor(Math.random() * 100);
-            guessCount = 10;
+            guessCount = 7;
             document.getElementById("start").disabled = "disabled";
             document.getElementById("submit").disabled = "";
             document.getElementById("inputTimes").value = guessCount;
@@ -69,7 +69,7 @@
     <input id="inputNum" type="number"><button id="submit" disabled="disabled"
         onclick="submit()">确定</button><button id="start" onclick="startGame()">开始</button>
     <p>结果：<input id="inputResult" value="" disabled="disabled"></p>
-    <p>当前还可以猜测的次数：<input id="inputTimes" value="10" disabled="disabled"></p>
+    <p>当前还可以猜测的次数：<input id="inputTimes" value="" disabled="disabled"></p>
 </body>
 
 </html>
