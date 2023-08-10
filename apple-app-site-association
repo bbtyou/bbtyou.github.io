@@ -7,7 +7,7 @@
         "details": [
             {
                 "appID": "YUW6E8YCJJ.net.nanhua.qh",
-                "paths": [ "*","/qq_conn/101783896/"]
+                "paths": [ "*","/qq_conn/101783896/*"]
             }
         ]
     }
